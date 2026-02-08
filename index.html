@@ -63,4 +63,154 @@
         }
     </script>
 </body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Ammu</title>
+    <style>
+        body { margin: 0; font-family: 'Arial', sans-serif; background-color: #fff5f7; color: #d63384; text-align: center; scroll-behavior: smooth; }
+        section { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; }
+        
+        /* Gallery */
+        .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; max-width: 500px; margin: 20px auto; }
+        .gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; border: 3px solid #ff4d6d; }
+
+        /* Buttons */
+        .btn-yes, .start-btn { background: #ff4d6d; color: white; border: none; padding: 15px 50px; font-size: 1.5rem; border-radius: 30px; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+        .btn-yes:hover, .start-btn:hover { transform: scale(1.1); background: #ff0054; }
+
+        #celebration { display: none; }
+        .next-btn { margin-top: 20px; text-decoration: none; color: white; background: #ff4d6d; padding: 12px 25px; border-radius: 20px; cursor: pointer; display: inline-block; font-weight: bold; }
+        
+        audio { display: none; }
+        .dance-vid { width: 300px; border-radius: 20px; margin-top: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+    </style>
+</head>
+<body>
+
+    <audio id="mySong" loop>
+        <source src="music.mp3.mp3" type="audio/mpeg">
+    </audio>
+
+    <section id="page1">
+        <h1 style="font-size: 4rem; margin: 0;">🌹</h1>
+        <h1>I love you very much ammu</h1>
+        <p>Click the heart to see our story</p>
+        <button class="start-btn" onclick="startApp()">❤️ Start</button>
+    </section>
+
+    <section id="page2">
+        <h1>My fav moments with you</h1>
+        <div class="gallery">
+            <img src="Snapchat-233770165.jpg">
+            <img src="Snapchat-80014633.jpg">
+            <img src="Snapchat-1357238360.jpg">
+            <img src="WhatsApp_Image_2024-12-05_at_22.42.59_ece25a4f.jpg">
+        </div>
+        <a href="#page3" class="next-btn">I have a question... ➔</a>
+    </section>
+
+    <section id="page3">
+        <div id="ask">
+            <h1>Will you be my valentine?</h1>
+            <button class="btn-yes" onclick="sayYes()">YES</button>
+        </div>
+        <div id="celebration">
+            <h1>YAY! I LOVE YOU! ❤️</h1>
+            <img src="dance-tiktok.gif" class="dance-vid" alt="Happy Dance">
+            <p style="margin-top: 20px; font-size: 1.2rem;">You're stuck with me now! 😍</p>
+        </div>
+    </section>
+
+    <script>
+        function startApp() {
+            var audio = document.getElementById('mySong');
+            audio.play().catch(e => console.log("Audio play failed:", e));
+            document.getElementById('page2').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function sayYes() {
+            document.getElementById('ask').style.display = 'none';
+            document.getElementById('celebration').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Ammu</title>
+    <style>
+        body { margin: 0; font-family: 'Arial', sans-serif; background-color: #fff5f7; color: #d63384; text-align: center; scroll-behavior: smooth; }
+        section { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; }
+        
+        /* Gallery */
+        .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; max-width: 500px; margin: 20px auto; }
+        .gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; border: 3px solid #ff4d6d; }
+
+        /* Buttons */
+        .btn-yes, .start-btn { background: #ff4d6d; color: white; border: none; padding: 15px 50px; font-size: 1.5rem; border-radius: 30px; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+        .btn-yes:hover, .start-btn:hover { transform: scale(1.1); background: #ff0054; }
+
+        #celebration { display: none; }
+        .next-btn { margin-top: 20px; text-decoration: none; color: white; background: #ff4d6d; padding: 12px 25px; border-radius: 20px; cursor: pointer; display: inline-block; font-weight: bold; }
+        
+        audio { display: none; }
+        .dance-vid { width: 300px; border-radius: 20px; margin-top: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+    </style>
+</head>
+<body>
+
+    <audio id="mySong" loop>
+        <source src="music.mp3.mp3" type="audio/mpeg">
+    </audio>
+
+    <section id="page1">
+        <h1 style="font-size: 4rem; margin: 0;">🌹</h1>
+        <h1>I love you very much ammu</h1>
+        <p>Click the heart to see our story</p>
+        <button class="start-btn" onclick="startApp()">❤️ Start</button>
+    </section>
+
+    <section id="page2">
+        <h1>My fav moments with you</h1>
+        <div class="gallery">
+            <img src="Snapchat-233770165.jpg">
+            <img src="Snapchat-80014633.jpg">
+            <img src="Snapchat-1357238360.jpg">
+            <img src="WhatsApp_Image_2024-12-05_at_22.42.59_ece25a4f.jpg">
+        </div>
+        <a href="#page3" class="next-btn">I have a question... ➔</a>
+    </section>
+
+    <section id="page3">
+        <div id="ask">
+            <h1>Will you be my valentine?</h1>
+            <button class="btn-yes" onclick="sayYes()">YES</button>
+        </div>
+        <div id="celebration">
+            <h1>YAY! I LOVE YOU! ❤️</h1>
+            <img src="dance-tiktok.gif" class="dance-vid" alt="Happy Dance">
+            <p style="margin-top: 20px; font-size: 1.2rem;">You're stuck with me now! 😍</p>
+        </div>
+    </section>
+
+    <script>
+        function startApp() {
+            var audio = document.getElementById('mySong');
+            audio.play().catch(e => console.log("Audio play failed:", e));
+            document.getElementById('page2').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function sayYes() {
+            document.getElementById('ask').style.display = 'none';
+            document.getElementById('celebration').style.display = 'block';
+        }
+    </script>
+
+</body>
 </html>
