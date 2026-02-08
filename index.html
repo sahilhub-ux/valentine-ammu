@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Ammu</title>
+    <style>
+        body { margin: 0; font-family: 'Arial', sans-serif; background-color: #fff5f7; color: #d63384; scroll-behavior: smooth; text-align: center; }
+        section { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; }
+        h1 { font-size: 2rem; }
+        .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; max-width: 500px; }
+        .gallery img { width: 100%; border-radius: 10px; border: 3px solid #ff4d6d; }
+        .btn-yes { background: #ff4d6d; color: white; border: none; padding: 15px 50px; font-size: 1.5rem; border-radius: 30px; cursor: pointer; }
+        #celebration { display: none; }
+        .next-btn { margin-top: 20px; text-decoration: none; color: white; background: #ff4d6d; padding: 10px 20px; border-radius: 20px; }
+    </style>
+</head>
+<body>
+
+    <section id="page1">
+        <span>🌹🌹🌹</span>
+        <h1>I love you very much, Ammu</h1>
+        <p>You make every day brighter.</p>
+        <a href="#page2" class="next-btn">Our Memories ➔</a>
+    </section>
+
+    <section id="page2">
+        <h1>My Fav Moments With You</h1>
+        <div class="gallery">
+            <img src="https://raw.githubusercontent.com/gemini-assets/main/Snapchat-233770165.jpg" alt="Us">
+            <img src="https://raw.githubusercontent.com/gemini-assets/main/Snapchat-80014633.jpg" alt="Spider-man">
+            <img src="https://raw.githubusercontent.com/gemini-assets/main/Snapchat-1357238360.jpg" alt="Holding Hands">
+            <img src="https://raw.githubusercontent.com/gemini-assets/main/WhatsApp_Image_2024-12-05_at_22.42.59_ece25a4f.jpg" alt="Classroom">
+        </div>
+        <a href="#page3" class="next-btn">I have a question... ➔</a>
+    </section>
+
+    <section id="page3">
+        <div id="ask">
+            <h1>Will you be my valentine?</h1>
+            <button class="btn-yes" onclick="showDance()">YES!</button>
+        </div>
+        <div id="celebration">
+            <h1>YAY! I LOVE YOU! ❤️</h1>
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHJueXBycmh6YmRzZzZqamZpbmZqZzRyeHpxeHpxeHpxeHpxeHpxJmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/l3V0lsG9XGCtPZsfm/giphy.gif" width="250">
+        </div>
+    </section>
+
+    <script>
+        function showDance() {
+            document.getElementById('ask').style.display = 'none';
+            document.getElementById('celebration').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
