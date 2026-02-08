@@ -6,33 +6,50 @@
     <title>For My Ammu</title>
     <style>
         body { margin: 0; font-family: 'Arial', sans-serif; background-color: #fff5f7; color: #d63384; scroll-behavior: smooth; text-align: center; }
-        section { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; }
-        h1 { font-size: 2rem; }
-        .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; max-width: 500px; }
-        .gallery img { width: 100%; border-radius: 10px; border: 3px solid #ff4d6d; }
-        .btn-yes { background: #ff4d6d; color: white; border: none; padding: 15px 50px; font-size: 1.5rem; border-radius: 30px; cursor: pointer; }
+        section { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; }
+        
+        h1 { font-size: 2.2rem; margin-bottom: 10px; text-shadow: 1px 1px 2px rgba(0,0,0,0.1); }
+        p { font-size: 1.1rem; }
+
+        /* Gallery Setup */
+        .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; max-width: 600px; margin: 20px auto; }
+        .gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 15px; border: 4px solid #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+
+        /* Buttons */
+        .btn-yes, .start-btn { background: #ff4d6d; color: white; border: none; padding: 15px 50px; font-size: 1.3rem; border-radius: 30px; cursor: pointer; text-decoration: none; display: inline-block; transition: 0.3s; }
+        .btn-yes:hover, .start-btn:hover { background: #ff0054; transform: scale(1.05); }
+
+        .next-link { margin-top: 25px; color: #ff4d6d; text-decoration: underline; font-weight: bold; cursor: pointer; }
+
         #celebration { display: none; }
-        .next-btn { margin-top: 20px; text-decoration: none; color: white; background: #ff4d6d; padding: 10px 20px; border-radius: 20px; }
+        .gif-img { width: 280px; border-radius: 15px; margin-top: 20px; }
+
+        /* Hidden Audio */
+        audio { display: none; }
     </style>
 </head>
 <body>
 
+    <audio id="mySong" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
     <section id="page1">
-        <span>🌹🌹🌹</span>
+        <span style="font-size: 50px;">🌹</span>
         <h1>I love you very much, Ammu</h1>
-        <p>You make every day brighter.</p>
-        <a href="#page2" class="next-btn">Our Memories ➔</a>
+        <p>Press the heart to start our story</p>
+        <button class="start-btn" onclick="startExperience()">❤️ Start</button>
     </section>
 
     <section id="page2">
         <h1>My Fav Moments With You</h1>
         <div class="gallery">
-            <img src="https://raw.githubusercontent.com/gemini-assets/main/Snapchat-233770165.jpg" alt="Us">
-            <img src="https://raw.githubusercontent.com/gemini-assets/main/Snapchat-80014633.jpg" alt="Spider-man">
-            <img src="https://raw.githubusercontent.com/gemini-assets/main/Snapchat-1357238360.jpg" alt="Holding Hands">
-            <img src="https://raw.githubusercontent.com/gemini-assets/main/WhatsApp_Image_2024-12-05_at_22.42.59_ece25a4f.jpg" alt="Classroom">
+            <img src="Snapchat-233770165.jpg" alt="Moment 1">
+            <img src="Snapchat-80014633.jpg" alt="Moment 2">
+            <img src="Snapchat-1357238360.jpg" alt="Moment 3">
+            <img src="WhatsApp_Image_2024-12-05_at_22.42.59_ece25a4f.jpg" alt="Moment 4">
         </div>
-        <a href="#page3" class="next-btn">I have a question... ➔</a>
+        <a href="#page3" class="next-link">I have a question for you...</a>
     </section>
 
     <section id="page3">
@@ -42,15 +59,25 @@
         </div>
         <div id="celebration">
             <h1>YAY! I LOVE YOU! ❤️</h1>
-            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHJueXBycmh6YmRzZzZqamZpbmZqZzRyeHpxeHpxeHpxeHpxeHpxJmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/l3V0lsG9XGCtPZsfm/giphy.gif" width="250">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHJueXBycmh6YmRzZzZqamZpbmZqZzRyeHpxeHpxeHpxeHpxeHpxJmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/l3V0lsG9XGCtPZsfm/giphy.gif" class="gif-img" alt="Dancing Guy">
+            <p>You're stuck with me now! 😍</p>
         </div>
     </section>
 
     <script>
+        function startExperience() {
+            // Play Music
+            var audio = document.getElementById("mySong");
+            audio.play();
+            // Scroll to next page
+            document.getElementById('page2').scrollIntoView();
+        }
+
         function showDance() {
             document.getElementById('ask').style.display = 'none';
             document.getElementById('celebration').style.display = 'block';
         }
     </script>
+
 </body>
 </html>
